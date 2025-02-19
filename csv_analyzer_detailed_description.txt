@@ -1,0 +1,43 @@
+Start program : python csv_analyzer.python
+
+Program: Please provide file name that should be analyzed:
+	Here file name should be provided (it could be written with .csv ending or not - > it will be added).
+	
+Base of file analysis will be shown (including: information about data in the file, first 5 lines, statistics)
+Meniu of selection what could be done next will be shown. 
+Additional analysis options:
+1: Show columns
+2: Correlation
+3: Show missing values in columns
+4: Export results to csv
+5: Visualization of products vs amount
+6: End
+Please select option:
+	Here number of selection could be inputed. 
+			When not existing selection will be written - > message will be shown : "Incorrect choice. Would you like to proceed? (Y/N):"
+		By providing Y - > program will come back to meniu of additional analysis options. If N will be provided - > Program will be ended. 
+			When existing number is provided: 
+			"1" - Columns of the file will be printed. + Question : "Would you like to proceed? (Y/N):"
+			"2" - Correlation of amount and price will be printed (numeric columns). + Question : "Would you like to proceed? (Y/N):"
+			"3" - Columns of the file will be printed and number of missing values in them. + Question : "Would you like to proceed? (Y/N):"
+			"4" - New selection will be provided:
+				What data would you like to include into export?
+				 1: main information of the file
+				 2: statistics
+				 3: missing values (of each column)
+				 4: correlation
+				 Please input numbers seperated by comma:
+					User will have 3 attempts to imput incorect numbers (after that message "You have reached your attempt limit." + Question : "Would you like to proceed? (Y/N):") 
+					When incorect input is provided - > message will be shown : "Incorrect choice: (5, 7 (incorect input)) - there is no such choice. Try again."
+					When correct input provided: 
+					Message "Please provide filename to export to:" will be shown. Here user can provide filename (with or without .csv - the same logic as for input file).
+					Message "Exported results to export_file.csv" - file export_file.csv created in the same directory. (could be improved by providing different path). (In the file choosen information should be founded).
+					+ Question : "Would you like to proceed? (Y/N):"
+			"5" - Visualization of products vs amount will be shown. + Question : "Would you like to proceed? (Y/N):" (when visualization is closed).
+			"6" - program will be ended. 
+			
+			
+			
+NOTES :
+	Answer for question "Would you like to proceed? (Y/N):" - case insensitive. - if (different symbol than Y/y will be provided - > program will be ended (logical point - could be improved.)). 
+	
